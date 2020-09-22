@@ -15,7 +15,6 @@ import com.jiema0217.common.utils.Query;
 import com.jiema0217.gulimall.product.dao.ProductAttrValueDao;
 import com.jiema0217.gulimall.product.entity.ProductAttrValueEntity;
 import com.jiema0217.gulimall.product.service.ProductAttrValueService;
-import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("productAttrValueService")
@@ -42,7 +41,6 @@ public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao
         return entities;
     }
 
-    @Transactional
     @Override
     public void updateSpuAttr(Long spuId, List<ProductAttrValueEntity> entities) {
         //1、删除spuId之前对应的属性
