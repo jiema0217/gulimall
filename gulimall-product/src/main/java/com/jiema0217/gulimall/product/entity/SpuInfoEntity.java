@@ -21,40 +21,40 @@ public class SpuInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 商品id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 商品名称
 	 */
 	private String spuName;
 	/**
-	 * $column.comments
+	 * 商品描述
 	 */
 	private String spuDescription;
 	/**
-	 * $column.comments
+	 * 所属分类id
 	 */
 	private Long catalogId;
 	/**
-	 * $column.comments
+	 * 品牌id
 	 */
 	private Long brandId;
 	/**
-	 * $column.comments
+	 *
 	 */
 	private BigDecimal weight;
 	/**
-	 * $column.comments
+	 * 上架状态[0 - 新建，1 - 上架，2-下架]
 	 */
 	private Integer publishStatus;
 	/**
-	 * $column.comments
+	 *
 	 */
 	private Date createTime;
 	/**
-	 * $column.comments
+	 *
 	 */
 	private Date updateTime;
 

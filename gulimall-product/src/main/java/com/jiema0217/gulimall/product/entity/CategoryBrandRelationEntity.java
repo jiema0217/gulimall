@@ -20,24 +20,24 @@ public class CategoryBrandRelationEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 *
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 品牌id
 	 */
 	private Long brandId;
 	/**
-	 * $column.comments
+	 * 分类id
 	 */
 	private Long catelogId;
 	/**
-	 * $column.comments
+	 *
 	 */
 	private String brandName;
 	/**
-	 * $column.comments
+	 *
 	 */
 	private String catelogName;
 

@@ -20,28 +20,28 @@ public class MemberLoginLogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * member_id
 	 */
 	private Long memberId;
 	/**
-	 * $column.comments
+	 * 创建时间
 	 */
 	private Date createTime;
 	/**
-	 * $column.comments
+	 * ip
 	 */
 	private String ip;
 	/**
-	 * $column.comments
+	 * city
 	 */
 	private String city;
 	/**
-	 * $column.comments
+	 * 登录类型[1-web，2-app]
 	 */
 	private Integer loginType;
 

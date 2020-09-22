@@ -20,44 +20,44 @@ public class CouponHistoryEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 优惠券id
 	 */
 	private Long couponId;
 	/**
-	 * $column.comments
+	 * 会员id
 	 */
 	private Long memberId;
 	/**
-	 * $column.comments
+	 * 会员名字
 	 */
 	private String memberNickName;
 	/**
-	 * $column.comments
+	 * 获取方式[0->后台赠送；1->主动领取]
 	 */
 	private Integer getType;
 	/**
-	 * $column.comments
+	 * 创建时间
 	 */
 	private Date createTime;
 	/**
-	 * $column.comments
+	 * 使用状态[0->未使用；1->已使用；2->已过期]
 	 */
 	private Integer useType;
 	/**
-	 * $column.comments
+	 * 使用时间
 	 */
 	private Date useTime;
 	/**
-	 * $column.comments
+	 * 订单id
 	 */
 	private Long orderId;
 	/**
-	 * $column.comments
+	 * 订单号
 	 */
 	private Long orderSn;
 

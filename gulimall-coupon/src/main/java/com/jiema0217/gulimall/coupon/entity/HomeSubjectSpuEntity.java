@@ -20,24 +20,24 @@ public class HomeSubjectSpuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 专题名字
 	 */
 	private String name;
 	/**
-	 * $column.comments
+	 * 专题id
 	 */
 	private Long subjectId;
 	/**
-	 * $column.comments
+	 * spu_id
 	 */
 	private Long spuId;
 	/**
-	 * $column.comments
+	 * 排序
 	 */
 	private Integer sort;
 

@@ -20,32 +20,32 @@ public class SeckillSkuNoticeEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * member_id
 	 */
 	private Long memberId;
 	/**
-	 * $column.comments
+	 * sku_id
 	 */
 	private Long skuId;
 	/**
-	 * $column.comments
+	 * 活动场次id
 	 */
 	private Long sessionId;
 	/**
-	 * $column.comments
+	 * 订阅时间
 	 */
 	private Date subcribeTime;
 	/**
-	 * $column.comments
+	 * 发送时间
 	 */
 	private Date sendTime;
 	/**
-	 * $column.comments
+	 * 通知方式[0-短信，1-邮件]
 	 */
 	private Integer noticeType;
 

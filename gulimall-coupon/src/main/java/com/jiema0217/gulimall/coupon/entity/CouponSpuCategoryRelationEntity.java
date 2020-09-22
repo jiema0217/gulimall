@@ -20,20 +20,20 @@ public class CouponSpuCategoryRelationEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 优惠券id
 	 */
 	private Long couponId;
 	/**
-	 * $column.comments
+	 * 产品分类id
 	 */
 	private Long categoryId;
 	/**
-	 * $column.comments
+	 * 产品分类名称
 	 */
 	private String categoryName;
 

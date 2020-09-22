@@ -20,24 +20,24 @@ public class SkuImagesEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * sku_id
 	 */
 	private Long skuId;
 	/**
-	 * $column.comments
+	 * 图片地址
 	 */
 	private String imgUrl;
 	/**
-	 * $column.comments
+	 * 排序
 	 */
 	private Integer imgSort;
 	/**
-	 * $column.comments
+	 * 默认图[0 - 不是默认图，1 - 是默认图]
 	 */
 	private Integer defaultImg;
 

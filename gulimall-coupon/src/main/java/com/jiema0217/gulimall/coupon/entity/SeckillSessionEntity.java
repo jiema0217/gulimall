@@ -20,28 +20,28 @@ public class SeckillSessionEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 场次名称
 	 */
 	private String name;
 	/**
-	 * $column.comments
+	 * 每日开始时间
 	 */
 	private Date startTime;
 	/**
-	 * $column.comments
+	 * 每日结束时间
 	 */
 	private Date endTime;
 	/**
-	 * $column.comments
+	 * 启用状态
 	 */
 	private Integer status;
 	/**
-	 * $column.comments
+	 * 创建时间
 	 */
 	private Date createTime;
 

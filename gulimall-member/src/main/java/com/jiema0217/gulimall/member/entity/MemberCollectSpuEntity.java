@@ -20,28 +20,28 @@ public class MemberCollectSpuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 会员id
 	 */
 	private Long memberId;
 	/**
-	 * $column.comments
+	 * spu_id
 	 */
 	private Long spuId;
 	/**
-	 * $column.comments
+	 * spu_name
 	 */
 	private String spuName;
 	/**
-	 * $column.comments
+	 * spu_img
 	 */
 	private String spuImg;
 	/**
-	 * $column.comments
+	 * create_time
 	 */
 	private Date createTime;
 

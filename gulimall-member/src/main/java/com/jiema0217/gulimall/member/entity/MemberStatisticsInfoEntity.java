@@ -21,64 +21,64 @@ public class MemberStatisticsInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 会员id
 	 */
 	private Long memberId;
 	/**
-	 * $column.comments
+	 * 累计消费金额
 	 */
 	private BigDecimal consumeAmount;
 	/**
-	 * $column.comments
+	 * 累计优惠金额
 	 */
 	private BigDecimal couponAmount;
 	/**
-	 * $column.comments
+	 * 订单数量
 	 */
 	private Integer orderCount;
 	/**
-	 * $column.comments
+	 * 优惠券数量
 	 */
 	private Integer couponCount;
 	/**
-	 * $column.comments
+	 * 评价数
 	 */
 	private Integer commentCount;
 	/**
-	 * $column.comments
+	 * 退货数量
 	 */
 	private Integer returnOrderCount;
 	/**
-	 * $column.comments
+	 * 登录次数
 	 */
 	private Integer loginCount;
 	/**
-	 * $column.comments
+	 * 关注数量
 	 */
 	private Integer attendCount;
 	/**
-	 * $column.comments
+	 * 粉丝数量
 	 */
 	private Integer fansCount;
 	/**
-	 * $column.comments
+	 * 收藏的商品数量
 	 */
 	private Integer collectProductCount;
 	/**
-	 * $column.comments
+	 * 收藏的专题活动数量
 	 */
 	private Integer collectSubjectCount;
 	/**
-	 * $column.comments
+	 * 收藏的评论数量
 	 */
 	private Integer collectCommentCount;
 	/**
-	 * $column.comments
+	 * 邀请的朋友数量
 	 */
 	private Integer inviteFriendCount;
 

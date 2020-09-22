@@ -20,16 +20,16 @@ public class CommentReplayEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 评论id
 	 */
 	private Long commentId;
 	/**
-	 * $column.comments
+	 * 回复id
 	 */
 	private Long replyId;
 

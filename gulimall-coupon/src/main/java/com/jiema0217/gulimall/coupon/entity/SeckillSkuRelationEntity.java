@@ -21,36 +21,36 @@ public class SeckillSkuRelationEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 活动id
 	 */
 	private Long promotionId;
 	/**
-	 * $column.comments
+	 * 活动场次id
 	 */
 	private Long promotionSessionId;
 	/**
-	 * $column.comments
+	 * 商品id
 	 */
 	private Long skuId;
 	/**
-	 * $column.comments
+	 * 秒杀价格
 	 */
 	private BigDecimal seckillPrice;
 	/**
-	 * $column.comments
+	 * 秒杀总量
 	 */
 	private BigDecimal seckillCount;
 	/**
-	 * $column.comments
+	 * 每人限购数量
 	 */
 	private BigDecimal seckillLimit;
 	/**
-	 * $column.comments
+	 * 排序
 	 */
 	private Integer seckillSort;
 

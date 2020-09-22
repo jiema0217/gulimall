@@ -20,28 +20,28 @@ public class SpuImagesEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * spu_id
 	 */
 	private Long spuId;
 	/**
-	 * $column.comments
+	 * 图片名
 	 */
 	private String imgName;
 	/**
-	 * $column.comments
+	 * 图片地址
 	 */
 	private String imgUrl;
 	/**
-	 * $column.comments
+	 * 顺序
 	 */
 	private Integer imgSort;
 	/**
-	 * $column.comments
+	 * 是否默认图
 	 */
 	private Integer defaultImg;
 

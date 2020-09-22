@@ -21,48 +21,48 @@ public class SkuInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * skuId
 	 */
 	@TableId
 	private Long skuId;
 	/**
-	 * $column.comments
+	 * spuId
 	 */
 	private Long spuId;
 	/**
-	 * $column.comments
+	 * sku名称
 	 */
 	private String skuName;
 	/**
-	 * $column.comments
+	 * sku介绍描述
 	 */
 	private String skuDesc;
 	/**
-	 * $column.comments
+	 * 所属分类id
 	 */
 	private Long catalogId;
 	/**
-	 * $column.comments
+	 * 品牌id
 	 */
 	private Long brandId;
 	/**
-	 * $column.comments
+	 * 默认图片
 	 */
 	private String skuDefaultImg;
 	/**
-	 * $column.comments
+	 * 标题
 	 */
 	private String skuTitle;
 	/**
-	 * $column.comments
+	 * 副标题
 	 */
 	private String skuSubtitle;
 	/**
-	 * $column.comments
+	 * 价格
 	 */
 	private BigDecimal price;
 	/**
-	 * $column.comments
+	 * 销量
 	 */
 	private Long saleCount;
 

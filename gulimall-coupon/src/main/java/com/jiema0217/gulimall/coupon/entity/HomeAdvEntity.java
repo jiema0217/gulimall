@@ -20,52 +20,52 @@ public class HomeAdvEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 名字
 	 */
 	private String name;
 	/**
-	 * $column.comments
+	 * 图片地址
 	 */
 	private String pic;
 	/**
-	 * $column.comments
+	 * 开始时间
 	 */
 	private Date startTime;
 	/**
-	 * $column.comments
+	 * 结束时间
 	 */
 	private Date endTime;
 	/**
-	 * $column.comments
+	 * 状态
 	 */
 	private Integer status;
 	/**
-	 * $column.comments
+	 * 点击数
 	 */
 	private Integer clickCount;
 	/**
-	 * $column.comments
+	 * 广告详情连接地址
 	 */
 	private String url;
 	/**
-	 * $column.comments
+	 * 备注
 	 */
 	private String note;
 	/**
-	 * $column.comments
+	 * 排序
 	 */
 	private Integer sort;
 	/**
-	 * $column.comments
+	 * 发布者
 	 */
 	private Long publisherId;
 	/**
-	 * $column.comments
+	 * 审核者
 	 */
 	private Long authId;
 
