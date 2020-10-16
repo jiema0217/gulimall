@@ -10,6 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -105,13 +106,18 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     //1）、升级lettuce客户端；2）、切换使用jedis
     @Override
     public Map<String, List<Catelog2Vo>> getCatalogJson() {
+        /**
+         * 1、空结果缓存：解决缓存穿透
+         * 2、设置过期时间（加随机值），解决缓存雪崩
+         * 3、加锁：解决缓存击穿
+         */
         //1、加入缓存逻辑，缓存中存的数据是json
         String catalogJson = redisTemplate.opsForValue().get("catalogJson");
         if (StringUtils.isEmpty(catalogJson)) {
             //2、缓存中没有，数据库查询
             Map<String, List<Catelog2Vo>> catalogJsonFromDb = getCatalogJsonFromDb();
             //3、查到的数据放入缓存，将对象转为json放在缓存
-            redisTemplate.opsForValue().set("catalogJson", JSON.toJSONString(catalogJsonFromDb));
+            redisTemplate.opsForValue().set("catalogJson", JSON.toJSONString(catalogJsonFromDb),1, TimeUnit.DAYS);
             return catalogJsonFromDb;
         }
         Map<String, List<Catelog2Vo>> result = JSON.parseObject(catalogJson, new TypeReference<Map<String, List<Catelog2Vo>>>() {
