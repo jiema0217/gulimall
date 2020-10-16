@@ -33,7 +33,12 @@ spring:
         - id: admin_route
           uri: lb://renren-fast
           predicates:
-            - Path=/**
+            - Path=/api/**
           filters:
             - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+        - id: gulimall_host_route
+          uri: lb://gulimall-product
+          predicates:
+            - Host=**.gulimall.com
 ## 前端项目，/api

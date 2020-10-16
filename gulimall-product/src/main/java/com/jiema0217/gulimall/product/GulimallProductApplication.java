@@ -36,7 +36,22 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  *          3、关联自定义的校验器和自定义的校验注解
  * 4、统一的异常处理
  * @ControllerAdvice
- *      1）、
+ *      1）、编写异常处理类，使用@ControllerAdvice
+ *      2）、使用@ExceptionHandler标注方法可以处理的异常
+ *
+ * 5、模板引擎
+ *      1）、thymeleaf-starter：关闭缓存
+ *      2）、静态资源都放在static文件夹下，可以按照路径直接访问
+ *      3）、页面放在templas下，可以直接访问
+ *          Spring Boot，访问项目默认会找index
+ *      4）、页面修改不重启服务器实时更新
+ *          1、引入dev-tools
+ *          2、修改完页面使用 Ctrl+Shift+F9 重新自动编译页面，代码配置，推荐重启
+ *
+ * 6、整合redis
+ *      1）、引入data-redis-starter
+ *      2）、简单配置redis的host等信息
+ *      3）、使用Spring-Boot自动配置好的StringRedisTemplate来操作redis
  */
 @EnableFeignClients(basePackages = "com.jiema0217.gulimall.product.feign")
 @EnableDiscoveryClient

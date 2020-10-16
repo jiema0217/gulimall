@@ -1,0 +1,9 @@
+package com.jiema0217.gulimall.ware.vo;
+
+import lombok.Data;
+
+@Data
+public class SkuHasStockVo {
+    private Long skuId;
+    private Boolean hasStock;
+}

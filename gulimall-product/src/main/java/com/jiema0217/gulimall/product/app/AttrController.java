@@ -1,4 +1,4 @@
-package com.jiema0217.gulimall.product.controller;
+package com.jiema0217.gulimall.product.app;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,13 +6,11 @@ import java.util.Map;
 
 import com.jiema0217.gulimall.product.entity.ProductAttrValueEntity;
 import com.jiema0217.gulimall.product.service.ProductAttrValueService;
-import com.jiema0217.gulimall.product.vo.AttrGroupRelationVo;
 import com.jiema0217.gulimall.product.vo.AttrRespVo;
 import com.jiema0217.gulimall.product.vo.AttrVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.jiema0217.gulimall.product.entity.AttrEntity;
 import com.jiema0217.gulimall.product.service.AttrService;
 import com.jiema0217.common.utils.PageUtils;
 import com.jiema0217.common.utils.R;
