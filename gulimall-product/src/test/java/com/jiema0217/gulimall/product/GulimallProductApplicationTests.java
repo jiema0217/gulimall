@@ -6,6 +6,7 @@ import com.jiema0217.gulimall.product.service.BrandService;
 import com.jiema0217.gulimall.product.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -33,6 +34,9 @@ class GulimallProductApplicationTests {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    RedissonClient redissonClient;
+
     @Test
     public void testFindPath() {
         Long[] catelogPath = categoryService.findCatelogPath(225L);
@@ -45,6 +49,11 @@ class GulimallProductApplicationTests {
         ops.set("hello", "world_" + UUID.randomUUID().toString());
         String hello = ops.get("hello");
         System.out.println(hello);
+    }
+
+    @Test
+    public void redisson() {
+        System.out.println(redissonClient);
     }
 
 //    @Autowired

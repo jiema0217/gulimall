@@ -3,6 +3,7 @@ package com.jiema0217.gulimall.product;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
@@ -52,7 +53,29 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  *      1）、引入data-redis-starter
  *      2）、简单配置redis的host等信息
  *      3）、使用Spring-Boot自动配置好的StringRedisTemplate来操作redis
+ *
+ * 7、整合redisson作为分布式等功能框架
+ *      1）、引入依赖
+ *      2）、配置redisson
+ *      3）、使用：参照文档
+ *
+ * 8、整合SpringCache简化缓存开发
+ *      1）、引入依赖
+ *      2）、写配置
+ *          1、自动配置了什么
+ *              CacheAutoConfiguration 会导入 RedisCacheConfiguration
+ *              自动配好了缓存管理器
+ *          2、配置使用redis作为缓存
+ *          3、测试使用缓存
+ *              1）、开启缓存功能
+ *              2）、只需要使用注解就能完成缓存操作
+ *          4、原理
+ *              CacheAutoConfiguration -> RedisCacheConfiguration -> 自动配置了缓存管理器 RedisCacheManager —> 初始化所有的缓存
+ *              -> 每个缓存决定使用什么配置 -> 如果 RedisCacheConfiguration 有就用已有的，没有就用默认配置
+ *              -> 想改缓存中的配置，只需要给容器中放一个RedisCacheConfiguration即可 -> 就会用到当前缓存管理器RedisCacheManager管理的所有缓存分区中
+ *
  */
+
 @EnableFeignClients(basePackages = "com.jiema0217.gulimall.product.feign")
 @EnableDiscoveryClient
 @MapperScan("com.jiema0217.gulimall.product.dao")
